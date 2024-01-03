@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .body {
+      background-color: rgb(255, 255, 255);
+     
+    }
+
+    .text-center {
+      padding-top: 20px;
+    }
+
+    .row {
+      padding-top: 20px;
+
+
+    }
+
+    .row:after {
+      content: none;
+      display: inline;
+      clear: both;
+
+    }
+
+    .column {
+      
+       width: 25px; 
+      padding-right: 430px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+    }
+
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      width: 90%;
+      max-width: 1200px;
+      height: 50%;
+    }
+
+
+    .close {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+
+    .mySlides {
+      display: none;
+    }
+
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 100%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+      padding-top: 20px;
+
+    }
+
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+
+    }
+
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(255, 248, 228, 0.8);
+      color: black;
+    }
+
+
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+
+    .caption-container {
+      text-align: center;
+      background-color: black;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    img.demo {
+      opacity: 0.6;
+      
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+
+    img.hover-shadow {
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .hover-shadow:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .left{
+    margin-left: 100px;
+    margin-top: 20px;
+  }
+  .logo {
+    margin-left: 450px;
+    width: 400px;
+  }
+  .right{
+    margin-top: 20px;
+
+  }
+  .container-fluid01{
+    justify-content: center;
+  }
+  .container-fluid01 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 10%;
+  }
+
+  nav ul {
+    text-align: center;
+  }
+
+  nav li {
+    display: inline-block;
+    list-style: none;
+
+  }
+
+  nav li a {
+    text-decoration: none;
+    padding: 20px;
+    color: #777;
+    font-family: product;
+  }
+
+  a:hover {
+    color: black;
+  }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 col-sm-4">
+        <a href="vision home.html"> <img class="logo" src="logo.png" alt="logo"></a>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+<hr>
+<nav>
+  <ul>
+    <li><a href="vision home.html">Home</a></li>
+    <li><a href="all.html">What we did</a></li>
+    <li><a href="Contact.html">Contact us</a></li>
+    <li><a href="our services.html">Our services</a></li>
+    <li><a href="events.html">Dream capture</a></li>
+    <li><a href="reg form.html">Registration Form</a></li>
+    <li><a href="location (1).html">Location</a></li>
+  </ul>
+</nav>
+  <div class="body">
+    <div class="container-fluid">
+      <h1 class="text-center"> <span style="border-bottom: 4px solid rgb(255, 3, 3);">DREAM CAPTURE</span> </h1>
+
+      <div class="row">
+        <div class="column">
+          <img src="img/pexels-asad-photo-maldives-169198.jpg" onclick="openModal();currentSlide(1)"
+            class="hover-shadow" width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-asad-photo-maldives-169209.jpg" onclick="openModal();currentSlide(2)"
+            class="hover-shadow" width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-askar-abayev-5638732.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+      </div>
+        <div class="row">
+        <div class="column">
+          <img src="img/pexels-craig-adderley-2306277.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-craig-adderley-2306279.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-craig-adderley-2306281.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+      </div>
+        <div class="row">
+        <div class="column">
+          <img src="img/pexels-dazzle-jam-1384614.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-giovanni-calia-2713711.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-harry-cooke-6194937.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+      </div>
+        <div class="row">
+        <div class="column">
+          <img src="img/pexels-ibrahim-boran-903400.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-ivan-57980.jpg" onclick="openModal();currentSlide(11)" class="hover-shadow" width="430px"
+            height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-jonathan-borba-9703867.jpg" onclick="openModal();currentSlide(12)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="img/pexels-jonathan-borba-9703872.jpg" onclick="openModal();currentSlide(13)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-ksenia-chernaya-3951652.jpg" onclick="openModal();currentSlide(14)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-markus-spiske-2106445.jpg" onclick="openModal();currentSlide(15)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="img/pexels-photomix-company-95753.jpg" onclick="openModal();currentSlide(16)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-pixabay-265947.jpg" onclick="openModal();currentSlide(17)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-pixabay-356065.jpg" onclick="openModal();currentSlide(18)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img src="img/pexels-photo-4112234.jpeg" onclick="openModal();currentSlide(19)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/tuncay-ozdal-27-1682625578.jfif" onclick="openModal();currentSlide(20)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-rachel-claire-4577410.jpg" onclick="openModal();currentSlide(21)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="img/pexels-rachel-claire-4997875.jpg" onclick="openModal();currentSlide(22)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-salah-alawadhi-382297.jpg" onclick="openModal();currentSlide(23)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-tara-winstead-6479601.jpg" onclick="openModal();currentSlide(24)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="img/pexels-tembela-bohle-1114425.jpg" onclick="openModal();currentSlide(25)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-vidal-balielo-jr-2337816.jpg" onclick="openModal();currentSlide(26)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+        <div class="column">
+          <img src="img/pexels-wondergrafer-s-anand-16781572.jpg" onclick="openModal();currentSlide(27)" class="hover-shadow"
+            width="430px" height="300px">
+        </div>
+      </div>
+
+
+    </div></div>
+
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides">
+            <div class="numbertext">1 / 27</div>
+            <img src="img/pexels-asad-photo-maldives-169198.jpg" style="width:100%" height="650px">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 27</div>
+            <img src="img/pexels-asad-photo-maldives-169209.jpg" style="width:100%" height="650px">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 27</div>
+            <img src="img/pexels-askar-abayev-5638732.jpg" style="width:100%" height="650px">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 27</div>
+            <img src="img/pexels-craig-adderley-2306277.jpg" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">5 / 27</div>
+            <img src="img/pexels-craig-adderley-2306279.jpg" style="width:100%" height="650px">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">6 / 27</div>
+            <img src="img/pexels-craig-adderley-2306281.jpg" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">7 / 27</div>
+            <img src="img/pexels-dazzle-jam-1384614.jpg" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">8 / 27</div>
+            <img src="img/pexels-giovanni-calia-2713711.jpg" style="width:100%" height="650px">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">9 / 27</div>
+            <img src="img/pexels-harry-cooke-6194937.jpg" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">10 / 27</div>
+            <img src="img/pexels-ibrahim-boran-903400.jpg" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">11 / 27</div>
+            <img src="img/pexels-ivan-57980.jpg" style="width:100%" height="650px">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">12 / 27</div>
+            <img src="img/pexels-jonathan-borba-9703867.jpg" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">13 / 27</div>
+            <img src="img/pexels-jonathan-borba-9703872.jpg" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">14 / 27</div>
+            <img src="img/pexels-ksenia-chernaya-3951652.jpg" style="width:100%" height="650px">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">15 / 27</div>
+            <img src="img/pexels-markus-spiske-2106445.jpg" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">16 /27 </div>
+            <img src="img/pexels-photomix-company-95753.jpg" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">17 / 27</div>
+            <img src="img/pexels-pixabay-265947.jpg" style="width:100%" height="650px">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">18 / 27</div>
+            <img src="img/pexels-pixabay-356065.jpg" style="width:100%" height="650px">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">19 / 27</div>
+            <img src="img/pexels-photo-4112234.jpeg" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">20 / 27</div>
+            <img src="img/tuncay-ozdal-27-1682625578.jfif" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">21 / 27</div>
+            <img src="img/pexels-rachel-claire-4577410.jpg" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">22 /27 </div>
+            <img src="img/pexels-rachel-claire-4997875.jpg" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">23 / 27</div>
+            <img src="img/pexels-salah-alawadhi-382297.jpg" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">24 / 27</div>
+            <img src="img/pexels-tara-winstead-6479601.jpg" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">25 / 27</div>
+            <img src="img/pexels-tembela-bohle-1114425.jpg" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">26 /27 </div>
+            <img src="img/pexels-vidal-balielo-jr-2337816.jpg" style="width:100%" height="650px">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">27 / 27</div>
+            <img src="img/pexels-wondergrafer-s-anand-16781572.jpg" style="width:100%" height="650px">
+          </div>
+
+
+
+
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+        </div>
+      </div>
+    
+</body>
+
+<script>
+
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+
+
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    captionText.innerHTML = dots[slideIndex - 1].alt;
+  }
+</script>
+<br>
+<br><br><br><br><br><br>
+<hr>
+<head>
+<style>
+.footercontainer{
+  display: flex;
+  justify-content: space-between;
+}
+p{
+margin-top: 50px;
+}
+.socialicons a{
+text-decoration: none;
+padding: 3px;
+}
+.socialicons a i{
+font-size: 20px;
+color: #737373;
+margin-top: 50px;
+}
+</style>
+</head>
+
+<footer>
+  <div class="container">
+    <div class="row">
+     <div class="col-lg-2 col-sm-4">
+  <div class="socialicons">
+    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
+</div>
+
+<div class="col-lg-8 col-sm-4">
+    <p>
+     <b> <a>Copyright @ 2023 technology. All rights reserved - Designed and Developed by proclamation Hub </a></b>
+    </p>
+  </div> 
+   <div class="col-lg-2 col-sm-4">
+  <video autoplay muted loop width="200px" height="100%">
+    <source id="vid" src="img/footer.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+ </div>
+</div>
+</div>
+</footer>
+
+
+</html>
+</div>
